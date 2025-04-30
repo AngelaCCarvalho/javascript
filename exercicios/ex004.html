@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: lightblue;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <title>Meu primeiro programa</title>
+</head>
+<body>
+    
+    <script>
+        var nome = prompt("Qual seu nome?")
+       document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)
+       //.lenght => Mostra quantas letras tem na palavra/frase.
+       document.write(`Seu nome em letra maiúscula fica assim : ${nome.toUpperCase()}<br>`)
+       //toUpperCase() => Transforma a palavra/frase em tudo "MAIÚSCULO".
+       document.write(`Seu nome em letra minúscula fica assim : ${nome.toLowerCase()}`)
+       //to.LowerCase()=> Transforma a palavra/frase em tudo "minúsculo".
+    </script>
+</body>
+</html>  
