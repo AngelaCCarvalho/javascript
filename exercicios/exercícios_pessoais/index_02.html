@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Calculadora de Soma com Conversão</h1>
+    <p>
+        Tarefa: Desenvolva um pequeno programa que: <br>
+
+        Solicite dois números ao usuário através de dois prompts diferentes. <br>
+
+        Converta esses valores para números (use Number() ou parseInt()), pois o prompt sempre retorna strings. <br>
+
+        Realize a soma entre esses dois números. <br>
+
+        Exiba o resultado final na página usando document.write(), utilizando Template Strings (com crases e ${}) para formatar a frase: "A soma entre [n1] e [n2] é igual a [resultado]". <br>
+    </p>
+    <script>
+        var n1 = parseInt(window.prompt("Digite um número:"))
+        var n2 = parseInt(window.prompt("Digite outro número:"))
+        var soma = n1 + n2
+        document.write(`A soma dos números ${n1} e ${n2} é ${soma}`)
+    </script>
+</body>
+</html>
