@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 6</title>
+</head>
+<body>
+    <h1>Incremento e Decremento</h1>
+
+    <p>Objetivo: Diferenciar o uso de ++ e --. <br>
+
+    Escreva um código que: <br>
+
+    Declare uma variável contador começando em 0. <br>
+
+    Use o operador de pós-incremento (++) três vezes seguidas. <br>
+
+    Declare uma variável estoque começando em 10. <br>
+
+    Use o operador de pré-decremento (--) duas vezes seguidas. <br>
+
+    Ao final, exiba uma frase usando Template Strings (do arquivo anterior) dizendo: "O contador está em [valor] e o estoque possui [valor] itens".</p>
+
+    <script>
+
+        let n = 0
+        n++;
+        n++;
+        n++;
+        document.write(`O resultado do n = 0 incrementado 3 vezes com n++ é: ${n} <br>`)
+
+        let num = 10
+        --num;
+        --num;
+        document.write(`O resultado do num = 10 decrementado duas vezes com --num é: ${num} <br>`)
+        document.write(`O contador está em ${n} e o estoque possui ${num} itens`)
+    </script>
+</body>
+</html>

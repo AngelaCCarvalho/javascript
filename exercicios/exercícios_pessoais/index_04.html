@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <h1>Cálculos Aritméticos e Precedência</h1>
+    <p>
+        Objetivo: Praticar a ordem correta das operações. <br>
+
+        Crie um script que solicite um número ao usuário e realize as seguintes operações, exibindo os resultados: <br>
+
+        Calcule o quadrado desse número (exponenciação). <br>
+
+        Calcule a metade desse número (divisão real). <br>
+
+        Calcule o resto da divisão desse número por 3. <br>
+
+        Desafio de Precedência: Crie uma variável que armazene o resultado da seguinte expressão: 5 + 10 / 2. Depois, crie outra que calcule (5 + 10) / 2. Exiba os dois valores e observe a diferença causada pelos parênteses.
+    </p>
+    <script>
+
+        let n = Number(window.prompt("Digite um número: "))
+        let m = n ** 2
+        let d = n / 2
+        let r = n % 3
+        let media = (5+10) / 2
+        let calculo = 5 + 10 / 2
+
+        document.write(`O número digitado é: ${n} <br>`)
+        document.write(`O resultado do número digitado sobre 2 é: ${m}.<br>`) 
+        document.write(`O resultado do número digitado dividido por 2 é: ${d}<br>`)
+        document.write(`O resultado do resto do número por 3 é: ${r} <br>`)
+        document.write(`O resultado de (5+10)/2 é ${media}: <br>`)
+        document.write(`O resultado de 5+10/2 é :${calculo} <br>`)
+
+    </script>
+</body>
+</html>
