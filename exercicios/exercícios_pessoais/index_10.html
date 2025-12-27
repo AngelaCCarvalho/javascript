@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Identificação e Estilo Básico</h1>
+
+    <p>
+        Objetivo: Praticar a seleção por ID e a modificação de texto e cores. <br>
+        Tarefa: <br>
+        Crie um arquivo HTML com uma div que tenha o id="caixa". Dentro dela, escreva "Texto Original". <br>
+        No seu script JavaScript: <br>
+        Selecione essa div usando document.getElementById('caixa'). <br>
+        Altere o texto dela para "O DOM é incrível!" usando a propriedade innerText. <br>
+        Mude a cor de fundo (backgroundColor) para azul e a cor do texto (color) para branco <br>
+    </p>
+
+    <div id="caixa">
+      <p>
+        Texto Original
+      </p>
+    </div>
+    
+    <script>
+      let caixa = document.getElementById('caixa')
+      caixa.innerText = 'O DOM é incrível';
+      caixa.style.backgroundColor = 'blue';
+      caixa.style.color = 'White';
+    </script>
+</body>
+</html>
