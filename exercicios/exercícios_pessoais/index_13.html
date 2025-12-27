@@ -28,15 +28,29 @@
         lista do mercado
         <ul>
             <li>Abobora</li>
-            <li>carne</li>
-            <li>feijão</li>
-            <li>arroz</li>
-            <li>legumes</li>
+            <li>Carne</li>
+            <li>Feijão</li>
+            <li>Arroz</li>
+            <li>Legumes</li>
         </ul>
     </p>
 </p>
 <script>
+ 
+ let todos  = document.querySelectorAll('ul li')
+  
+ // let i = Onde começa, que nesse caso começa no "0".
+ // todos.length = É até onde o programa vai rodar. Neste caso se o [i] for menor que a variavél "todos".
+ // i++ = É a soma da variável [i] +1.
 
+ for (let i = 0; i < todos.length; i++){
+      if (i % 2 === 0){
+        todos[i].style.backgroundColor = 'lightgray';
+      } else {
+        todos[i].style.backgroundColor = 'blue';
+      }
+ }
+ 
 </script>
 </body>
 </html>
