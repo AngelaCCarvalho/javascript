@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 8</title>
+</head>
+<body>
+
+    <h1>Sistema de Descontos (Operadores Lógicos)</h1>
+
+<p>
+    Objetivo: Combinar condições usando Conjunção (&&) e Disjunção (||).<br>
+    
+    Tarefa: Imagine um cinema onde o ingresso custa R$ 40,00. Alguém tem direito a meia-entrada se:<br>
+    
+    Tiver menos de 12 anos OU mais de 65 anos.<br>
+    
+    OU se for estudante (pergunte isso com window.confirm, que retorna true ou false).<br>
+    
+    Crie um programa que:<br>
+    
+    Peça a idade do usuário.<br>
+    
+    Pergunte se ele é estudante (use let eEstudante = confirm("Você é estudante?")).<br>
+    
+    Crie uma variável booleana temDireitoAMeia que combine essas condições.<br>
+    
+    Exiba no documento: "Tem direito a meia-entrada? [resultado true/false]".<br>
+</p>
+<script>
+
+    let idade = parseInt(window.prompt("Qual sua idade?"))
+    let eEstudante = confirm('Você é estudante?')
+    let temDireito = idade <= 12 || idade >= 65 || eEstudante
+
+    document.write(`Tem direito a meia- entrada? ${temDireito}.`)
+</script>
+</body>
+</html>

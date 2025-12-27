@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 7</title>
+</head>
+<body>
+    <h1>Comparação de Identidade (Valor vs. Tipo)</h1>
+
+<p>
+    Objetivo: Entender a diferença entre == (igualdade) e === (identidade/estritamente igual). <br>   
+    
+    Tarefa: Crie um script que:<br>
+    
+    Declare uma variável numero com o valor numérico 10.<br>
+    
+    Declare uma variável texto com a string '10'.<br>
+    
+    Use console.log ou document.write para mostrar o resultado das seguintes comparações: <br>   
+    
+    numero = = texto (Verifica apenas o valor).  <br>  
+    
+    numero = = = texto (Verifica valor e tipo). <br>   
+    
+    numero ! = = texto (Verifica se são estritamente diferentes).<br>
+    
+    Adicione um comentário no código explicando por que a segunda comparação resultou em false.<br>
+</p>
+<script>
+
+    let n = 5
+    let s = "5"
+     
+    let res = n == s
+    let res2 = n === s
+    let res3 = n !== s
+
+    document.write(`O resultado de 5 = = "5": ${res}, 5 = = = "5": ${res2} e 5 ! = = "5" ${res3}`) // O res2 resulta em FALSE, pois o Number é diferente em valor e tipo de uma String.
+
+
+</script>
+</body>
+</html>

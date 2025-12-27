@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="teste">TESTE DE TÍTULO</h1>
+    </header>
+    <h1>Seletores Modernos e Conteúdo HTML</h1>
+
+<p>
+    Objetivo: Praticar o uso de querySelector e a diferença entre innerText e innerHTML. <br>
+    
+    Tarefa:<br>
+    
+    Crie um header que contenha um título -h1- e um -span- dentro de um parágrafo.<br>
+    
+    No seu script JavaScript:<br>
+    
+    Use o document.querySelector() para selecionar o primeiro -span- que encontrar na página.<br>
+    
+    Altere o conteúdo desse elemento usando innerHTML, inserindo uma tag de negrito: mySpan.innerHTML = '<strong>Texto importante!</strong>'.<br>
+    
+    Use o querySelector novamente para selecionar o h1 e mude o alinhamento do texto para o centro usando style.textAlign = 'center'.<br>
+
+</p>
+<p class="paragrafo">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse voluptatibus consequatur? Amet aspernatur dignissimos, quaerat excepturi sunt eligendi expedita dicta nemo aut, culpa natus eius possimus iste saepe quam!<span>LOREM</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui dolore cumque minima quam quis voluptate aut provident velit et. Quos dolorum quis deserunt consequatur praesentium qui dolor nobis temporibus.
+</p>
+<script>
+  
+  titulo = document.querySelector('#teste')
+  titulo.style.backgroundColor = 'black';
+  titulo.style.color = 'white';
+  titulo.style.textAlign = 'center';
+  marcação = document.querySelector('span')
+  marcação.innerHTML = '<strong> Texto importante </strong>'
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h1>Manipulando Coleções de Elementos</h1>
+
+<p>
+    Objetivo: Praticar a seleção múltipla e o uso de loops para aplicar estilos. <br>
+    
+    Tarefa:<br>
+    
+    Crie uma lista (pode ser várias tags <p>) onde todas tenham a class="item-lista".<br>
+    
+    No seu script JavaScript:<br>
+    
+    Selecione todos esses elementos de uma vez usando document.getElementsByClassName('item-lista') ou document.querySelectorAll('.item-lista').    <br>
+    
+    Use um laço de repetição (for) para percorrer todos os itens selecionados.<br>
+    
+    Dentro do laço, altere o tamanho da fonte (fontSize) de cada um para "20px" e coloque o texto em itálico.<br>
+</p>
+<p class="item-list">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci provident quasi sequi explicabo itaque aliquid nobis natus eveniet sed quidem autem nam quo assumenda, quia ea enim aspernatur maiores et.
+</p>
+<p class="item-list">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid perspiciatis ratione consequuntur facilis laboriosam nihil corporis fuga repudiandae tempora autem! Labore, repellendus eaque. Ab quia minus voluptates ipsam blanditiis similique.
+</p> 
+<p class="item-list">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequatur adipisci doloribus mollitia minima ullam vitae earum pariatur, dignissimos repellendus quod, harum in maiores voluptatum! Earum doloremque sapiente possimus veniam!
+</p>
+<script>
+    let paragrafos = document.querySelectorAll('.item-list');
+    for ( let i = 0; i < paragrafos.length; i++)    
+    {
+    paragrafos[i].style.fontSize = '20px';
+    paragrafos[i].style.fontFamily = 'Verdana';
+    paragrafos[i].style.fontStyle = 'italic';}
+</script>
+</body>
+</html>

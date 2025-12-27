@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 9</title>
+</head>
+<h1>Status de Aprovação (Operador Ternário e Precedência)</h1>
+
+<p>
+    Objetivo: Usar o operador ternário para decisões rápidas e entender a ordem de avaliação. <br>   
+    
+    Tarefa: Crie um script de boletim escolar que:<br>
+    
+    Receba duas notas de um aluno.<br>
+    
+    Calcule a média aritmética dessas notas.<br>
+    
+    Crie uma variável situacao que use o Operador Ternário:<br>
+    
+    Se a média for maior ou igual a 7, a variável recebe "Aprovado".<br>
+    
+    Se for menor que 7, recebe "Reprovado".<br>
+    
+    Desafio de Precedência: Tente prever o resultado da expressão abaixo antes de rodar o código e depois verifique se acertou:   <br> 
+    
+    let desafio = 5 + 10 > 15 && !(10 === 10). <br>
+    
+    Exiba o resultado de situacao e de desafio na tela.<br>
+</p>
+<script>
+
+    let nota = Number(window.prompt("Digite a primeira nota:"))
+    let nota2 = Number (window.prompt("Digite a segunda nota:"))
+    let media = (nota + nota2) /2
+    let res = media >= 7 ? "APROVADO" : "REPROVADO"
+
+    let desafio = 5+10 > 15 && !(10 === 10)
+
+    document.write(`Você foi : ${res}, resultado do desafio é ${desafio}`)
+
+
+</script>
+<body>
+    
+</body>
+</html>

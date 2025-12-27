@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Conversor de Moeda e Formatação</h1>
+
+    <p>
+        Objetivo: Praticar a formatação de números e o uso de constantes. <br>
+
+        Tarefa: Imagine que você está criando um sistema financeiro. Faça um script que: <br>
+
+        Declare uma variável com let ou const para receber um valor numérico decimal (ex: um salário) <br>
+
+        Formate esse número para que ele mostre apenas duas casas decimais usando .toFixed(2). <br>
+
+        Em seguida, exiba esse mesmo valor formatado como moeda brasileira (R$) utilizando o método .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }). <br>
+
+        Adicione um comentário de múltiplas linhas no topo do seu código explicando o que cada parte faz. <br>
+    </p>
+     
+    <script>
+        let salario = parseFloat(window.prompt("Qual seu salário?"))
+        alert(`Seu salário é : ${salario.toFixed(2)}`)
+        document.write(`Seu salário : ${salario.toLocaleString('pt-BR', { style: 'currency', currency:'BRL'})}`);
+    
+    </script>
+</body>
+</html>
