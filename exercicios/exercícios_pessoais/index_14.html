@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explorando a Árvore (Pai e Filho)</h1>
+
+    <p>
+        Objetivo: Entender as relações hierárquicas da árvore DOM.<br>
+        
+        Tarefa:<br>
+        
+        Crie uma div com o ID conteudo-pai. Dentro dela, coloque um título -h2> e um parágrafo -p>.<br>
+        
+        No seu JavaScript:<br>
+        
+        Selecione a div pelo ID.<br>
+        
+        Acesse o primeiro filho dessa div (o h2) e mude o texto dele para "Título Atualizado pelo Filho".<br>
+        
+        Altere o estilo do "pai" (div) para ter uma borda preta de 2px.<br>
+    </p>
+    <div id="conteudo_pai">
+        <h2>Título escrito pelo PAI</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iure, cupiditate esse nostrum perferendis provident, quae fuga porro ab officiis a ipsum omnis sunt vitae impedit. Harum ad deleniti saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minima repellendus molestiae, ipsum fugiat velit iure consectetur commodi doloribus magnam! Adipisci, quibusdam ipsum placeat vel cumque veniam quae assumenda fugit!
+        </p>
+    </div>
+    <script>
+         let pai = document.getElementById('conteudo_pai')
+         // let filho = pai.querySelector('h2'); Busca dentro do pai.
+         let filho = document.getElementsByTagName('h2')[0]
+         pai.style.border = 'solid 2px'
+         filho.innerText = 'Título Atualizado pelo Filho'
+    </script>
+
+</body>
+</html>

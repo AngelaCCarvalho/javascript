@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criando um "Modo Noturno" Simples</h1>
+
+        <p>
+            Objetivo: Praticar a modificação de múltiplos estilos ao mesmo tempo.<br>
+
+            Tarefa:<br>
+
+            Crie uma página simples com um h1, dois p e uma div de fundo.
+            No seu JavaScript:<br>
+
+            Selecione o body da página (você pode usar document.body ou document.querySelector('body')).<br>
+
+            Mude a cor de fundo do body para #222 (preto escuro).<br>
+
+            Selecione todos os elementos de texto da página e mude a cor deles para white.<br>
+
+            Desafio: Use o innerHTML para adicionar um pequeno rodapé ao final do body com o texto: "Modo Noturno Ativado".<br>
+            <div id="main">
+                <h1>Título</h1>
+                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur veniam incidunt nihil nam nesciunt nostrum dolorum sunt non dignissimos animi odio vitae vel harum cupiditate accusamus, numquam laudantium mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis reiciendis atque in magni necessitatibus! Fugiat eveniet molestias, sequi accusantium culpa repellendus alias doloribus id maxime magni quia beatae quidem magnam.</p>
+                <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolor nisi omnis. Quia laborum recusandae dolorem provident amet suscipit distinctio repudiandae qui, iusto numquam, ab doloribus ex cumque minus quae?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aperiam ex necessitatibus dicta. Aliquid eaque dolor doloremque, veniam amet molestias quos? Quidem nostrum aut, quos dolor molestias aperiam expedita sed.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi pariatur assumenda laborum doloribus molestias cum aperiam ratione delectus repudiandae cupiditate, sint sapiente eveniet mollitia doloremque in exercitationem unde rem accusamus.
+                </p>
+            </div>
+
+        </p>
+        <script>
+            let corpo = document.getElementsByTagName('body')[0]
+            corpo.style.backgroundColor = '#222'
+            corpo.style.color = 'white'
+            //Usamos "+=" para adicionar uma tag no conteúdo HTML sem precisar substiruir uma tag existente.
+            corpo.innerHTML += '<footer> <p>Modo Noturno Ativado</p> </footer>'
+
+        </script>
+</body>
+</html>
