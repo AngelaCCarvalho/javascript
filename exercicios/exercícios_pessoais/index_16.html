@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#main{
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height:200px;
+            text-align: center;
+            font-size: large;
+            
+        }
+    </style>
+    <title>Exercício 16</title>
+</head>
+<body>
+    <h1>Galeria de Cores Interativa</h1>
+
+<p>
+    Objetivo: Praticar diferentes eventos de mouse e o método addEventListener.<br>
+    
+    Tarefa: Crie uma -div> quadrada (ex: 200px por 200px) com um fundo azul. Use JavaScript para adicionar os seguintes comportamentos sem usar eventos inline no HTML:  <br>  
+    
+    Ao clicar: O fundo da -div> deve mudar para vermelho e o texto interno para "Fui Clicado!"   <br> 
+    
+    Ao entrar com o mouse: O fundo deve mudar para amarelo. <br>   
+    
+    Ao sair com o mouse: O fundo deve voltar para azul e o texto para "Interaja aqui"<br>
+    <div id="main">
+         Interaja aqui!
+    </div>
+</p>
+<script>
+    let mouse = document.querySelector('#main')
+    mouse.addEventListener('click', clicar);
+    mouse.addEventListener('mouseenter', entrar);
+    mouse.addEventListener('mouseout', sair);
+    function clicar(){
+        mouse.style.backgroundColor = "red"
+        mouse.style.color = "white"
+        mouse.innerText = "Fui Clicado!"
+    }
+    function entrar(){
+        mouse.style.backgroundColor = "yellow"
+        mouse.style.color = "green"
+        mouse.innerText = "Mouse em cima da DIV!"
+    }
+    function sair(){
+        mouse.style.backgroundColor = "blue"
+        mouse.style.color = "white"
+        mouse.innerText = "Interaja Aqui!"
+    }
+</script>
+</body>
+</html>
