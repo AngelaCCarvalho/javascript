@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        button{
+            margin: 50px;
+            height: 55px;
+            width: 100px;
+            border-radius: 5px;
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+           
+        }
+    </style>
+    <title>Exercício 18</title>
+</head>
+<body>
+    <h1>Contador de Cliques e Escopo</h1>
+
+<p>
+    Objetivo: Compreender o escopo de variáveis e a atualização dinâmica de conteúdo.<br>
+    
+    Tarefa: Crie um botão escrito "Contar" e um parágrafo que diga "Cliques: 0".<br>
+    
+    Declare uma variável contador fora de qualquer função (escopo global para este script) e inicie-a com 0.<br>
+    
+    Crie uma função que, cada vez que o botão for clicado:<br>
+    
+    Incremente a variável contador.<br>
+    
+    Atualize o texto do parágrafo usando Template Literals para mostrar o novo valor. <br>   
+    
+    Dica do Guia: Use o Console do navegador (DevTools) para verificar se a variável está aumentando corretamente caso o texto não mude.<br>
+    <button class="botao">
+        <p>Contar</p>
+    </button>
+    <p class="contar">
+     Você clicou: 
+    </p>
+</p>
+<script>
+    
+    let contador = 0
+
+    let botao = document.querySelector('.botao')
+    let contar = document.querySelector('.contar')
+    
+    botao.addEventListener('click', clicar)
+    botao.addEventListener('mouseout', sair)
+
+    function clicar(){        
+
+        botao.style.backgroundColor = 'lightgreen';
+        
+        contador++;
+
+        contar.innerHTML = `Você clicou ${contador} de vezes!` 
+        
+    }
+   function sair(){
+        botao.style.backgroundColor = 'lightgray'
+   }
+</script>
+</body>
+</html>
