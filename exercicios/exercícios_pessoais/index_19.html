@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#main{
+            background-color: lightgray;
+            width: 400px;
+            height: 320px;
+            margin: 50px;
+            border-radius: 5px;
+            box-shadow: 2px 2px black;
+        }
+        p.calculadora{
+            padding: 10px;
+            text-align: center;
+            color: black;
+            font-size: large;
+            font-weight: bolder;
+        }
+        input.entrada{
+            margin-top: 5px;
+            margin-bottom: 2px;
+            padding: 2px;
+        }
+        input.entrada2{
+            margin-top: 5px;
+            margin-bottom: 2px;
+            padding: 2px;
+        }
+        p{
+             text-align: center;
+             
+            
+        }
+        button{
+            text-align: center;
+            border-radius: 5px;
+            margin-left: 170px;
+            padding: 5px;
+        }
+        p.resultado{
+            margin-left: 100px;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+    <title>Exercício 19</title>
+</head>
+<body>
+    <h1>Calculadora de Gorjeta (Cálculo)</h1>
+    <div>
+        <p>
+            Tarefa:Crie uma interface onde o usuário digita o <strong>Valor da Conta e a Porcentagem da Gorjeta</strong> (ex: 10, 15 ou 20).<br>
+            No HTML, use dois <strong>-input type="number"></strong> e um <strong>-button></strong> para disparar a função.<br>
+            No JavaScript, crie uma função que:<br>
+             -Capture os valores e os converta para <strong>Number()</strong><br>
+             -Calcule o valor da gorjeta: <strong>$Valor x (Porcentagem / 100)$</strong>.<br>
+             -Calcule o valor total: <strong>$Valor + Gorjeta$</strong>.<br>
+             Exiba o resultado em uma -div> usando Template Literals<br>
+             Desafio: Se o valor total for maior que R$ 100,00, mude a cor do texto do resultado para laranja.
+             
+        </p>
+        
+    </div>
+    <div id="main">
+
+        <p class="calculadora">Cálculadora</p>
+        <p class="gorjeta">Valor da conta <br>
+            <input type="number" class="entrada" name="txtn1"><br>
+             + <br>
+             % Gorjeta <br>
+            <input type="number" class="entrada2" name="txtn2">
+            
+        </p>
+
+        <button class="botao">Calcular</button>
+
+        <p class="resultado">
+            O resultado é: 
+        </p>
+
+        <script>
+            let botao = document.querySelector('.botao')
+            botao.addEventListener('click', clicar)
+            botao.addEventListener('mouseout', sair)                    
+
+            function clicar(){
+
+                // estilo do botão
+                botao.style.backgroundColor = 'lightgreen'
+
+
+                // criação de variáveis
+                let tn1 = document.querySelector('.entrada')
+                let tn2 = document.querySelector('.entrada2')
+                let resultado = document.querySelector('.resultado')
+
+                // Cálculos
+                let n1 = Number(tn1.value)
+                let n2 = Number(tn2.value)
+                let gorjeta = n1*(n2/100)
+                let res = n1 + gorjeta
+
+                //Apresentação de resultado
+                resultado.innerHTML = `O valor total a pagar é <strong>${res.toFixed(2)}</strong>.`
+
+                if(res > 100){
+                      resultado.style.color = 'orange'
+                      resultado.style.backgroundColor = 'white'
+                }else{
+                    resultado.style.color = 'red'
+                }
+            }
+            function sair (){
+                botao.style.backgroundColor = 'white'
+            }
+        </script>
+    </div>
+
+</body>
+</html>
