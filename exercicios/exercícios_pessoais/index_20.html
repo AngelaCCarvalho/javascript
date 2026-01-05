@@ -3,29 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+       
+        div#main{
+            background-color: rgb(21, 113, 113);
+            width: 210px;
+            height: 100px;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            border: 10px;
+            border-color: blue;
+            border-radius: 5px;
+        }
+        button{
+            margin-top: 20px;
+            padding: 5px
+            
+            
+        }
+        div > p{
+            color: white;
+        }
+    </style>
+    <title>Exercício 8</title>
 </head>
 <body>
-    Exercício 8: Contador de Passos (Contagem e Limite)
+    <h1>Contador de Passos (Contagem e Limite)</h1>
 
-Objetivo: Praticar o escopo de variáveis globais e o uso de condicionais (if/else) dentro de eventos.
-+1
+<p>
+    Objetivo: Praticar o escopo de variáveis globais e o uso de condicionais (if/else) dentro de eventos.<br> 
+    
+    Tarefa: Crie um botão "Dar um Passo" e uma -div> que mostre a quantidade de passos.<br>
+    
+    Declare uma variável passos = 0 no escopo global (fora da função).<br>
+    
+    Crie uma função chamada caminhar() que:<br>
+    
+    Incremente a variável passos cada vez que o botão for clicado.<br>
+    
+    Atualize o innerText ou innerHTML da -div> com a contagem atual.<br>
+    
+    Lógica de Condição:<br>
+    
+    Quando chegar a 10 passos, mude a cor do fundo do botão para verde e mude o texto dele para "Objetivo Alcançado!".<br>
+    
+    Adicione um segundo botão chamado "Resetar" que volta o contador para 0 e limpa o estilo do primeiro botão.<br>
+</p>
+<div id="main">
+     <button class="botao"> Dar um passo</button> 
+     <button class="botao2">Resetar</button> 
+     <p class="resultado">
+        Vamos Caminhar!
+     </p>    
 
-Tarefa: Crie um botão "Dar um Passo" e uma <div> que mostre a quantidade de passos.
+</div>
 
-Declare uma variável passos = 0 no escopo global (fora da função).
-+1
+<script>
+     let passo = 0
+     let botao =document.querySelector('.botao')
+     let botao2 = document.querySelector('.botao2')
+     let res = document.querySelector('.resultado')
+    botao.addEventListener('click', caminhar)
+    botao2.addEventListener('click', resetar)
+    function caminhar(){
+        
+        //contador
+        passo++
 
-Crie uma função chamada caminhar() que:
+        res.innerHTML = `Você caminhou <strong>${passo}</strong> passos!`
 
-Incremente a variável passos cada vez que o botão for clicado.
+        //Meta alcançada
+        if(passo >= 10){
+            
+            botao.style.backgroundColor = 'lightgreen'
+            botao.innerText = 'Objetivo Alcançado!'
+            
+       }else{
+            
+       }
+    }
+    function resetar(){
 
-Atualize o innerText ou innerHTML da <div> com a contagem atual.
+        passo = 0
 
-Lógica de Condição:
+         botao.style.backgroundColor = 'white'
+         botao.innerText = 'Dar um Passo'
+         res.innerText = 'Vamos Caminhar!'
+         
 
-Quando chegar a 10 passos, mude a cor do fundo do botão para verde e mude o texto dele para "Objetivo Alcançado!".
-
-Adicione um segundo botão chamado "Resetar" que volta o contador para 0 e limpa o estilo do primeiro botão.
+    }
+</script>
 </body>
 </html>
