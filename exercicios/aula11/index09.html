@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#main{
+            background-color: rgb(138, 197, 177);
+            width: 300px;
+            height: 200px;
+            text-align: center;
+        }
+        p{
+            padding-top: 35px;
+            color: whitesmoke;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input{
+            margin: 10px;
+        }
+        button{
+            
+        }
+        div#res{
+            color: white;
+        }
+        
+    </style>
+    <title>Exercício 09</title>
+</head>
+<body>
+    <h1>Verificação de Nacionalidade</h1>
+    <div id="main">
+        <p>
+            Você está vivendo a onde? <input type="text" name="pais" class="pais"><br>
+            <button class="botao">Verificar Nacionalidade</button><br>
+            
+        </p>       
+        <div id="res"></div>
+    </div>
+    
+    
+    
+    <script>
+
+        let botao = document.querySelector('.botao')
+        botao.addEventListener('click', verificar)
+                
+        function verificar(){       
+            
+            let pais = document.querySelector('.pais')
+            let res = document.querySelector('#res')
+            let nacionalidade = String(pais.value)
+
+            if(nacionalidade.toUpperCase() === 'BRASIL'){
+                res.innerHTML = `Você é <strong>Brasileiro</strong>!`
+            }else {
+                res.innerHTML = `Você é <strong>Estrangeiro</strong>!`
+            }
+
+            pais.value = ''
+            
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #main{
+            background-color: lightgray;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        input{
+            margin: 15px;
+        }
+        .texto{
+            color: green;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-style: oblique;
+        }
+    </style>
+    <title>Exercício 21</title>
+</head>
+<body>
+    <h1>Sistema de Votação (Condição Simples)</h1>
+
+<p>
+    Objetivo: Aplicar uma condição simples onde uma ação só ocorre se um critério específico for atingido.<br>
+    
+    Tarefa: Crie um sistema que verifique se uma pessoa já tem idade para votar (considere a idade mínima de 16 anos para este exercício).<br>
+    
+    No HTML, crie um campo para digitar a idade (&lt;input type="number"&gt;) e um botão para validar.<br>
+    
+    No JavaScript, crie uma função que:<br>
+    
+    Converta o valor do input para um número usando Number().<br>
+    
+    Use uma condição simples (if):<br>
+    
+    Se a idade for maior ou igual a 16, adicione a mensagem: "Você já pode votar!".<br>
+    
+    Fora da condição (para que apareça sempre), exiba a mensagem: "Verificação de idade concluída."<br>
+</p>
+<div id="main">
+    <p>
+        Validação de idade para voto<br>
+        <input type="number" name="txtn1" class="input"><br>
+        <button class="botao">Validar</button>
+    </p>
+    <div class="resultado"></div>
+    <div class="texto"></div>
+</div>
+     
+<script>
+    
+    botao=document.querySelector('.botao')
+    botao.addEventListener('click', validar)
+    
+
+    function validar(){
+         
+        let tn1 = document.querySelector('.input')
+        idade = Number(tn1.value)
+        let res = document.querySelector('.resultado')
+        let txt = document.querySelector('.texto')
+
+        // Limpa o resultado anterior antes de começar a nova verificação
+        res.innerHTML = ''
+
+        if(idade >= 16){
+            res.innerHTML = `Você tem <strong>${idade}</strong> anos, pode votar!`
+            
+        }
+                       
+              txt.innerHTML = '<p> Verificação concluida!</p>'  
+    }
+         
+
+</script>
+</body>
+</html>
