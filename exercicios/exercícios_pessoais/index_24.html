@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #main{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(0, 0, 255);
+            color: rgb(52, 255, 1);
+            width: 260px;
+            height: 160px;
+            font-weight: bold;
+
+        }
+        button{
+            border-radius: 6px;
+            margin-bottom: 15px;
+            padding: 3px;
+        }
+    </style>
     <title>Exercício 24</title>
 </head>
 <body>
@@ -25,5 +42,34 @@
     
     Exiba o resultado em uma &lt;div&gt; de resposta.<br>
 </p>
+<div id="main">
+    <p>Atleta, Digite sua idade para saber sua Categoria!</p>
+    <input type="number" class="anos">
+    <button class="botao">Validar</button>
+    <div class="texto">texto</div>
+</div>
+<script>
+    
+    let botao = document.querySelector('.botao')
+    let idade = document.querySelector('.anos')
+    let idade2 = Number(idade.value)
+    let txt = document.querySelector('.texto')
+
+    botao.addEventListener('click', validar)
+
+    function validar(){
+
+        if( idade2 < 10){
+           txt.innerHTML = '<p> Categoria Infantil </p>'
+        } else if(idade1 >=10 && idade2 <15){
+            txt.innerHTML = '<p> Categoria Juvenil</p>'
+        }else if(idade2 >= 15 || idade2 >=18){
+            txt.innerHTML = '<p> Categoria Adulto</>'
+        }else{
+            txt.innerHTML = '<p> Não tem Categoria para sua idade!'
+        }
+    }
+
+</script>
 </body>
 </html>
