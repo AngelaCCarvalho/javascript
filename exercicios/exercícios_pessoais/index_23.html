@@ -3,28 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        div{
+            background-color: #da4e65;
+            padding: 20px;
+            width: 250px;
+            height: 150px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+        }
+
+    </style>
+    <title>Exercício 23</title>
 </head>
 <body>
-    Exercício 2: Nome do Mês com switch
-Objetivo: Praticar a estrutura switch para valores fixos e o uso do break.
+     <h1>Nome do Mês com switch</h1>
+<p>
+    Objetivo: Praticar a estrutura switch para valores fixos e o uso do break.<br>
+    
+    Tarefa: Crie uma interface onde o usuário digita o número de um mês (1 a 4) em um campo &lt;input&gt;.<br>
+    
+    Ao clicar em um botão, use a estrutura switch para verificar o número:<br>
+    
+    Case 1: Exiba "Janeiro".<br>
+    
+    Case 2: Exiba "Fevereiro".<br>
+    
+    Case 3: Exiba "Março".<br>
+    
+    Case 4: Exiba "Abril".<br>    
+    
+    Default: Exiba "Mês não mapeado".<br>    
+    
+    Importante: Não esqueça de colocar o comando break após cada caso para evitar que o código "caia" nos próximos.<br>
+</p>
+<div id="main">
+    <p>Digite um número de 1 a 12 para descobrir o mês!</p>
+    <input type="number" class="txtn1">
+    <button class="botao">Validar</button>
+    <p class="texto"></p>
+</div>
+<script>
+       
+       let botao = document.querySelector('.botao')
+       botao.addEventListener('click', validar)
+       botao.addEventListener('mouseout', sair)
 
-Tarefa: Crie uma interface onde o usuário digita o número de um mês (1 a 4) em um campo <input>.
+       
+       
+       
+       function validar(){
 
-Ao clicar em um botão, use a estrutura switch para verificar o número:
+        botao.style.backgroundColor = 'lightgreen'
 
-Case 1: Exiba "Janeiro".
+        let tn1 = document.querySelector('.txtn1')
+        let num = Number(tn1.value)
+        let txt = document.querySelector('.texto')        
 
-Case 2: Exiba "Fevereiro".
+        switch(num){
+            case 1:
+                txt.innerHTML = 'Janeiro'
+                break;
+            case 2:
+                txt.innerHTML = 'Fevereiro'
+                break;
+            case 3:
+                txt.innerHTML = 'Março'
+                break;
+            case 4:
+                txt.innerHTML = 'Abril'
+                break;
+            case 5:
+                txt.innerHTML = 'Maio'
+                break;
+            case 6:
+                txt.innerHTML = 'Junho'
+                break;
+            case 7:
+                txt.innerHTML = 'Julho'
+                break;
+            case 8:
+                txt.innerHTML = 'Agosto'
+                break;
+            case 9:
+                txt.innerHTML = 'Setembro'
+                break;
+            case 10:
+                txt.innerHTML = 'Outubro'
+                break;
+            case 11:
+                txt.innerHTML = 'Novembro'
+                break;
+            case 12:
+                txt.innerHTML = 'Dezembro'
+                break; 
+            default:     
+                txt.innerHTML = "<p>[ERRO] Mês não mapeado</p>"                       
 
-Case 3: Exiba "Março".
+        }
+        
+        
+       }
 
-Case 4: Exiba "Abril".
+       function sair(){
 
-
-Default: Exiba "Mês não mapeado".
-
-
-Importante: Não esqueça de colocar o comando break após cada caso para evitar que o código "caia" nos próximos.
+        botao.style.backgroundColor = 'lightgray'
+       }
+</script>
 </body>
 </html>
