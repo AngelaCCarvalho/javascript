@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            padding: 20px;
+            background-color: rgb(202, 153, 248);
+            width: 300px;
+            height: 150px;
+            font-family: 'Courier New', Courier, monospace, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 3px;
+            box-shadow: 2px 2px black ;
+        }
+        button{
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .texto{
+
+        }
+    </style>
+    <title>Exercicio 22</title>
+</head>
+<body>
+    <h1>Saudação por Horário (else if)</h1>
+<p>
+    Objetivo: Praticar condições aninhadas e o uso do objeto Date.<br>
+    
+    Tarefa: Crie um script que verifique a hora atual do sistema e exiba uma saudação apropriada.<br>
+    
+    Use new Date() e getHours() para obter a hora atual.<br>
+    
+    Use uma estrutura if...else if...else para as seguintes faixas:<br>
+    
+    Entre 6 e 11 horas: Exiba "Bom dia!".<br>
+    
+    Entre 12 e 18 horas: Exiba "Boa tarde!".<br>
+    
+    Entre 19 e 23 horas: Exiba "Boa noite!".<br>
+    
+    Entre 0 e 5 horas: Exiba "Boa madrugada!".<br>    
+    
+    Desafio: Exiba a frase: "Agora são exatamente X horas", onde X é a hora obtida.    
+</p>
+<div id="main"> 
+    <p>Clique no botão abaixo para saber as horas!</p>
+    <button class="botao">Clique</button>
+    <p class="texto"></p>
+</div>
+<script>  
+
+    
+    let botao = document.querySelector('.botao')
+    botao.addEventListener('click', clicar)
+    botao.addEventListener('mouseout', sair)
+
+    function clicar(){
+
+        botao.style.backgroundColor = 'lightgreen'
+
+        let data = new Date();
+        let horas = data.getHours();
+        let min = data.getMinutes();
+
+        let txt = document.querySelector('.texto')
+
+        if(horas >= 6 && horas <= 11){
+            txt.innerHTML = `Bom Dia! Agora são exatamente ${horas} horas e ${min}minutos!`
+        } else if( horas >= 12 && horas <= 18){
+            txt.innerHTML = `Boa Tarde! Agora são exatamente ${horas} horas e ${min} minutos!`
+        } else if(horas >= 19 && horas <= 23 ){
+            txt.innerHTML = `Boa Noite! Agora são exatamente ${horas} horas e ${min} minutos!`
+        } else if (horas >= 0 && horas <= 5){
+            txt.innerHTML = `Boa Madrugada! Agora são exatamente ${horas} horas e ${min} minutos!`
+        }else{
+            txt.innerHTML = '[ERRO NO SISTEMA]'
+        }
+    }
+
+    function sair(){
+
+        botao.style.backgroundColor = 'lightgray'
+    }
+
+
+</script>
+</body>
+</html>
