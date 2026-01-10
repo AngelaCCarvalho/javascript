@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>Meu Site</h1>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+<script>
+    function toggleMenu() {
+    // Seleciona o menu pelo ID
+    const menu = document.getElementById('nav-menu');
+    
+    // O comando "toggle" adiciona a classe se ela não existir, e remove se ela já estiver lá
+    menu.classList.toggle('active');
+}
+</script>
+</body>
+</html>

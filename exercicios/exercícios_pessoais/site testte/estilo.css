@@ -1,0 +1,44 @@
+@charset "UTF-8"
+
+/* Estilo dos três riscos */
+.menu-toggle {
+    cursor: pointer;
+    display: block; /* Mostra o botão */
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s; /* Para animações futuras */
+}
+
+/* Estilo do Menu (Escondido à direita) */
+#nav-menu {
+    position: fixed;
+    right: -250px; /* Joga o menu para fora da tela */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #444;
+    transition: 0.5s; /* Velocidade da abertura */
+    padding-top: 60px;
+}
+
+/* Quando o menu tiver a classe "active", ele volta para a tela */
+#nav-menu.active {
+    right: 0;
+}
+
+#nav-menu ul {
+    list-style: none;
+}
+
+#nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+}

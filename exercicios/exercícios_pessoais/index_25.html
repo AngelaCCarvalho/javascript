@@ -3,23 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 25</title>
 </head>
 <body>
-    Exercício 4: Verificador de Dia Útil (switch)
-Objetivo: Praticar o uso de new Date().getDay() e o agrupamento de casos no switch.
+    <h1>Verificador de Dia Útil (switch)</h1>
+<p>
+    Objetivo: Praticar o uso de new Date().getDay() e o agrupamento de casos no switch.<br>
+    
+    Tarefa: Crie um script que identifique se hoje é um dia útil ou fim de semana.<br>
+    
+    Obtenha o dia da semana atual (lembre-se que 0 é Domingo e 6 é Sábado ).<br>
+    
+    Use um switch para validar:<br>
+    
+    Se for 0 ou 6, exiba: "Hoje é fim de semana!".<br>
+    
+    Se for de 1 a 5, exiba: "Dia de trabalhar/estudar!".  <br>  
+    
+    Dica: Você pode colocar dois case seguidos sem break entre eles para que executem o mesmo bloco de código.<br>
+</p>
+<div class="main">
 
-Tarefa: Crie um script que identifique se hoje é um dia útil ou fim de semana.
+  <p>Verifique se hoje é um dia útil! Digite de 1 a 7!</p>
+  <input type="number" class="input">
+  <button class="botao">Verificar</button>
+  <div class="resultado"></div>
 
-Obtenha o dia da semana atual (lembre-se que 0 é Domingo e 6 é Sábado ).
+</div>
+<script>
+    
+    let botao = document.querySelector('.botao')
+    botao.addEventListener('click', verificar)
+    let txt = document.querySelector('.resultado')
+    
 
-Use um switch para validar:
+    function verificar(){
 
-Se for 0 ou 6, exiba: "Hoje é fim de semana!".
+        let data = new Date();
+        let dia = data.getDay();
+        let tn1 = document.querySelector('.input')
+        let num = Number (tn1.value)
 
-Se for de 1 a 5, exiba: "Dia de trabalhar/estudar!".
+        switch(num){
+            case 1:
+                txt.innerHTML = `Hoje é Fim de semana! `
+                break;
+            case 2:
+                txt.innerHTML = `Hoje é Dia de trabalhar/estudar!`
+                break;
+            case 3:
+                txt.innerHTML = `Hoje é Dia de trabalhar/estudar!`
+                break;
+            case 4:
+                txt.innerHTML = `Hoje é Dia de trabalhar/estudar!`
+            case 5:
+                txt.innerHTML = `Hoje é Dia de trabalhar/estudar!`
+                break;
+            case 6:
+                txt.innerHTML = `Hoje é Dia de trabalhar/estudar!`
+                break;
+            case 7:
+                txt.innerHTML = `Hoje é Fim de semana! `
+                break;   
+            default:
+                txt.innerHTML = 'Opção Inválida!'             
+                
+        }
 
-
-Dica: Você pode colocar dois case seguidos sem break entre eles para que executem o mesmo bloco de código.
+    }
+</script>
 </body>
 </html>
