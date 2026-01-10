@@ -1,27 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        #main{
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(0, 0, 255);
+            color: rgb(52, 255, 1);
+            width: 260px;
+            height: 160px;
+            font-weight: bold;
+
+        }
+        button{
+            border-radius: 6px;
+            margin-bottom: 15px;
+            padding: 3px;
+        }
+    </style>
+    <title>Exercício 24</title>
 </head>
 <body>
-    Exercício 3: Classificação Etária (Operadores Lógicos)
+     <h1>Classificação Etária (Operadores Lógicos)</h1>
 
-Objetivo: Praticar o operador lógico || (OU) e && (E) em condições aninhadas.
+<p>
+    Objetivo: Praticar o operador lógico || (OU) e && (E) em condições aninhadas.<br>
+    
+    Tarefa: Crie um verificador de categoria de atleta baseado na idade.<br>
 
-Tarefa: Crie um verificador de categoria de atleta baseado na idade.
+    Capture a idade de um competidor.<br>
+    
+    Use else if para classificar:<br>
+    
+    Idade &lt; 10: "Categoria Infantil".<br>
+    
+    Idade >= 10 E Idade &lt; 15: "Categoria Juvenil".<br>
+    
+    Idade >= 15 OU Idade >= 18: "Categoria Adulto". (Tente usar o operador || ou && para validar as faixas ).<br>
+    
+    Exiba o resultado em uma &lt;div&gt; de resposta.<br>
+</p>
+<div id="main">
+    <p>Atleta, Digite sua idade para saber sua Categoria!</p>
+    <input type="number" class="anos">
+    <button class="botao">Validar</button>
+    <div class="texto"></div>
+</div>
+<script>
+    
+    let botao = document.querySelector('.botao')
+    
+    let txt = document.querySelector('.texto')
 
-Capture a idade de um competidor.
+    botao.addEventListener('click', validar)
 
-Use else if para classificar:
+    function validar(){
 
-Idade < 10: "Categoria Infantil".
+        let idade = document.querySelector('.anos')
+        let idade2 = Number(idade.value)
 
-Idade >= 10 E Idade < 15: "Categoria Juvenil".
+        if( idade2 > 0 && idade2 < 10){
+           txt.innerHTML = '<p> Categoria Infantil </p>'
+        } else if(idade2 >= 10 && idade2 < 15){
+            txt.innerHTML = '<p> Categoria Juvenil</p>'
+        }else if(idade2 >= 15 && idade2 <= 40 ){
+            txt.innerHTML = '<p> Categoria Adulto</p>'
+        }else if(idade2 > 40){
+            txt.innerHTML = '<p> Não tem Categoria para sua idade!</p>'
+        }else {
+            txt.style.color ='red'
+            txt.innerHTML = '<p> [ERRO] </p>'
+        }
 
-Idade >= 15 OU Idade >= 18: "Categoria Adulto". (Tente usar o operador || ou && para validar as faixas ).
+        idade.value = ''
+        
+        
+    }
 
-Exiba o resultado em uma <div> de resposta.
+</script>
 </body>
 </html>
