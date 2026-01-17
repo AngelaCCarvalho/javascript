@@ -19,6 +19,9 @@ let img = document.querySelector('.imagem')
 //Variável Body
 let body = document.querySelector('#corpo')
 
+   //Contruindo a base da primeira fase
+   let saudacao = "";
+
     if(horas >= 6 && horas < 12){
 
         body.style.backgroundColor = '#D3A93A'
