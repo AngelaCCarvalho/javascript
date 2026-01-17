@@ -23,22 +23,39 @@ function clicar() {
     let idade = anoAtual - anoNasc;
 
     // Captura do sexo
-    let sexo = document.getElementsByTagName('radsex');
+    let sexo = document.getElementsByName('radsex');
 
     //Captura do texto
     let txt = document.querySelector('.teste')
+
+    //Declaração da variável img
+    let img = document.querySelector('#img')
     
     if (mesAtual < mesNasc || (mesAtual === mesNasc && diaAtual < diaNasc) ){
        idade--;
-    }      
+    }  
     
-    txt.innerHTML = `Sua idade é ${idade}`
+    let genero = ''
 
-    if(){
-        
+    if(sexo[0].checked){
+
+        genero = 'Homem'
+
+    }else if (sexo[1].checked){
+
+        genero = 'Mulher'
     }
 
-    
+    if( idade >= 1 && idade <= 14 && genero == 'Homem'){
+
+         txt.innerHTML = `Você é Menino e tem ${idade} anos.`
+         img.src = 'imagem/menino.png'
+         
+    }else if (idade >= 1 && idade <= 14 && genero == 'Mulher')
+
+        txt.innerHTML = `Você é Menino e tem ${idade} anos.`
+        img.src = 'imagem/menina.png'
+         
 
 
 }
