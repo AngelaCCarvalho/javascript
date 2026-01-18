@@ -44,4 +44,5 @@ footer{
     object-fit: cover; /* Não deixa a imagem ficar esticada*/
     border: 5px solid rgb(58, 113, 164); /* Opcional: dá um destaque legal */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Opcional: dá profundidade */
+    display: none;
 }

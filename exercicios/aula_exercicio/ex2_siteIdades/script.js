@@ -57,30 +57,44 @@ function clicar() {
 
          txt.innerHTML = `Você é Menino de ${idade} anos.`
          img.src = 'imagem/menino.png'
+         img.style.display = 'block'
+         img.style.margin = 'auto'
          
     }else if (idade >= 1 && idade <= 14 && genero == 'Mulher'){
 
         txt.innerHTML = `Você é um Menina de ${idade} anos.`
         img.src = 'imagem/menina.png'
+        img.style.display = 'block'
+        img.style.margin = 'auto'
 
     }else if(idade >= 18 && idade <= 59 && genero == 'Mulher'){
          
         txt.innerHTML = `Você é uma Mulher de ${idade} anos.`
         img.src = 'imagem/mulher.png'
+        img.style.display = 'block'
+        img.style.margin = 'auto'
 
     }else if(idade >= 18 && idade <= 59 && genero == 'Homem'){
          
         txt.innerHTML = `Você é um Homem de ${idade} anos.`
         img.src = 'imagem/homem.png'
+        img.style.display = 'block'
+        img.style.margin = 'auto'
 
     }else if(idade >= 60 && genero == 'Homem'){
          
         txt.innerHTML = `Você é um Homem de ${idade} anos.`
         img.src = 'imagem/idoso.png' 
-
+        img.style.display = 'block'
+        img.style.margin = 'auto'
+          
     }else {         
+
         txt.innerHTML = `Você é uma Mulher de ${idade} anos.`
-        img.src = 'imagem/idosa.png'   
+        img.src = 'imagem/idosa.png'  
+        img.style.display = 'block'
+        img.style.margin = 'auto'
+        
     }
 
 }
