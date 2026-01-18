@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #main{
+            background-color: rgb(223, 222, 114);
+            width: 250px;
+            height: 200px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.599);
+        }
+        #botao{
+            display:flexbox; 
+            margin-top: 50px;  
+            border-radius: 5px;
+            
+        }
+        
+    </style>
+    <title>exercício 26</title>
+</head>
+<body>
+   <h1>Verificador de Turno e Saudação</h1>
+   <p>
+    Objetivo: Criar um sistema que, ao clicar em um botão, capture a hora do sistema e diga se é manhã, tarde, noite ou madrugada, mudando a cor do fundo.<br>
+    
+    Regra: Use new Date().getHours() diretamente na comparação do if.<br>
+    
+    Desafio: Tente fazer o código sem criar uma variável para o objeto Date, capturando a hora assim: let hora = new Date().getHours().
+    </p>
+    <div id="main">
+        <button id="botao">Verificar</button>
+        <div id="res"></div>
+    </div>
+    
+    <script>
+
+        let botao = document.querySelector('#botao')
+        botao.addEventListener('click', clicar)
+         
+        function clicar(){
+
+          let hora = new Date().getHours();
+          let min = new Date().getMinutes();
+          let res = document.querySelector('#res')
+
+          if(hora >= 0 && hora <=5){
+
+            res.innerHTML = `Boa Madrugada! Agora sáo ${hora} horas e ${min} minutos!`
+            body.style.background = 'black'
+          
+          } else if(hora >= 6 && hora <= 11){
+
+            res.innerHTML = `Bom dia! Agora sáo ${hora} horas e ${min} minutos!`
+            body.style.background = 'black'
+          
+          }else if(hora >= 12 && hora <= 18){
+
+            res.innerHTML = `Boa Tarde! Agora sáo ${hora} horas e ${min} minutos!`
+            body.style.background = 'black'
+          
+          }else if(hora >= 19 && hora <=23 ){
+
+            res.innerHTML = `Agora sáo ${hora} horas e ${min} minutos!`
+            body.style.background = 'black'
+          
+          }
+
+
+
+
+          res.innerHTML = `Agora sáo ${hora} horas e ${min} minutos!`
+
+        }
+    </script>
+</body>
+</html>
