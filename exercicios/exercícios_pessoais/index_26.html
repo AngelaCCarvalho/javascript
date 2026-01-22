@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #main{
-            background-color: rgb(223, 222, 114);
+            background-color: rgba(236, 59, 168, 0.955);
             width: 250px;
-            height: 200px;
+            height: 250px;
             margin: auto;
             border-radius: 5px;
             box-shadow: 5px 5px rgba(0, 0, 0, 0.599);
+
+            display: flex;
+            flex-direction: column;   /* Itens um embaixo do outro */
+            justify-content: center;  /* Centraliza na vertical */
+            align-items: center;
         }
         #botao{
-            display:flexbox; 
-            margin-top: 50px;  
-            border-radius: 5px;
-            
+            margin: 10px
+        }
+        #res{
+          text-align: center;
+          margin-top: 10px;
+          font-style: oblique;
+          font-weight: bold;
+          
         }
         
     </style>
     <title>exercício 26</title>
 </head>
-<body>
+<body id="fundo">
    <h1>Verificador de Turno e Saudação</h1>
    <p>
     Objetivo: Criar um sistema que, ao clicar em um botão, capture a hora do sistema e diga se é manhã, tarde, noite ou madrugada, mudando a cor do fundo.<br>
@@ -46,33 +55,36 @@
           let hora = new Date().getHours();
           let min = new Date().getMinutes();
           let res = document.querySelector('#res')
+          let body = document.querySelector('#fundo')
+
+          res.innerHTML = `Agora sáo ${hora} horas e ${min} minutos! `
 
           if(hora >= 0 && hora <=5){
 
-            res.innerHTML = `Boa Madrugada! Agora sáo ${hora} horas e ${min} minutos!`
-            body.style.background = 'black'
+            res.innerHTML += 'Boa Madrugada'
+            body.style.background = '#091955'
           
           } else if(hora >= 6 && hora <= 11){
 
-            res.innerHTML = `Bom dia! Agora sáo ${hora} horas e ${min} minutos!`
-            body.style.background = 'black'
+            res.innerHTML += 'Bom dia'
+            body.style.background = '#569FA6'
           
           }else if(hora >= 12 && hora <= 18){
 
-            res.innerHTML = `Boa Tarde! Agora sáo ${hora} horas e ${min} minutos!`
-            body.style.background = 'black'
+            res.innerHTML += 'Boa Tarde'
+            body.style.background = '#FE9C03'
           
           }else if(hora >= 19 && hora <=23 ){
 
-            res.innerHTML = `Agora sáo ${hora} horas e ${min} minutos!`
-            body.style.background = 'black'
+            res.innerHTML += 'Boa Noite'
+            body.style.background = '#223539'
           
           }
 
 
 
 
-          res.innerHTML = `Agora sáo ${hora} horas e ${min} minutos!`
+          
 
         }
     </script>
