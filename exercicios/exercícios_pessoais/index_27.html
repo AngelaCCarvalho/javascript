@@ -3,14 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>exercicio 27</title>
 </head>
 <body>
-    Exercício 2: Calculadora de Dias para o Aniversário
-Objetivo: O usuário digita o dia e o mês do próximo aniversário e o sistema diz quantos meses faltam (aproximadamente).
+    <h1>Calculadora de Dias para o Aniversário</h1>
+<p>
+    Objetivo: O usuário digita o dia e o mês do próximo aniversário e o sistema diz quantos meses faltam (aproximadamente).<br>
+    
+    Regra: Capture os valores dos inputs de forma direta: let mesAlvo = Number(document.querySelector('#mes').value).<br>
+    
+    Dica: Compare com new Date().getMonth().
+</p>
+<div>
+    <p>
+       Data do seu aniversário: <input type="date" id="inputData">
+        <button id="botao">Calcular</button>
+    </p>
+    <div id="res">
+      <p> Preencha os Dados à Cima!</p>
+    </div>
+</div>
+<script>
 
-Regra: Capture os valores dos inputs de forma direta: let mesAlvo = Number(document.querySelector('#mes').value).
+    let botao = document.querySelector('#botao')
+    botao.addEventListener('click', clicar)
 
-Dica: Compare com new Date().getMonth() + 1.
+    function clicar (){
+
+        let entrada = document.querySelector('#inputData')
+        let dataAniver = new Date (entrada.value)
+
+        //Valores do input        
+        let mesAtual = dataAniver.getUTCMonth() +1
+        let diaAtual = dataAniver.getUTCDate()
+
+        //Valores do sistema
+        let dataSist = new Date ()
+        let mesAlvo = dataSist.getMonth() +1
+        let diaAlvo = dataSist.getDate()
+
+        //Calculo dos meses
+        let mes = mesAlvo - mesAtual
+        let dia = diaAtual - diaAlvo
+        if(mes < 0){
+            mes += 12
+        }else if (mes == 0 ){
+            if(dia < 0){
+                dia += 30
+                mes--
+            }
+        }
+
+         res.innerHTML= `Faltam ${mes} meses pro seu aniversário e ${dia} dias!`
+    }
+ 
+</script>
 </body>
 </html>
